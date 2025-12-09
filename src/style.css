@@ -47,6 +47,7 @@ body::before {
   max-width: 550px;
   position: relative;
   z-index: 1;
+  margin-bottom: 15px;
 }
 
 header {
@@ -135,5 +136,142 @@ input[type="submit"]:active {
 }
 
 .hint {
-  color: #047857;
+  color: #a7f3d0;
+  font-size: 0.95rem;
+  text-align: center;
+  margin-bottom: 30px;
+  font-style: italic;
+  opacity: 0.7;
+  position: relative;
+  z-index: 1;
+  max-width: 550px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.poem {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 45px;
+  border-radius: 20px;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  width: 100%;
+  max-width: 550px;
+  margin-bottom: 40px;
+  font-size: 1.3rem;
+  line-height: 2;
+  color: #d1fae5;
+  font-style: italic;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.poem.hidden {
+  display: none;
+}
+
+.poem::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-size: 4rem;
+  color: rgba(16, 185, 129, 0.2);
+  font-family: Georgia, serif;
+}
+
+footer {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 25px 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  text-align: center;
+  font-size: 0.95rem;
+  color: #a7f3d0;
+  max-width: 650px;
+  line-height: 1.8;
+  position: relative;
+  z-index: 1;
+  font-family: "Segoe UI", sans-serif;
+}
+
+footer a {
+  color: #6ee7b7;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+footer a:hover {
+  color: #10b981;
+  border-bottom-color: #10b981;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  header {
+    margin-bottom: 35px;
+  }
+
+  form,
+  .poem {
+    padding: 30px 25px;
+  }
+
+  input[type="text"],
+  input[type="submit"] {
+    padding: 15px;
+    font-size: 1rem;
+  }
+
+  .poem {
+    font-size: 1.1rem;
+  }
+
+  .hint {
+    font-size: 0.85rem;
+  }
+
+  footer {
+    font-size: 0.85rem;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 30px 15px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  form,
+  .poem {
+    padding: 25px 20px;
+  }
+}
+.generating {
+  color: #6ee7b7;
+  font-size: 1.1rem;
+  font-style: normal;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
 }
