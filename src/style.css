@@ -131,7 +131,7 @@ input[type="submit"]:active {
   transform: translateY(-1px);
 }
 
-div {
+.poem {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   padding: 45px;
@@ -151,7 +151,11 @@ div {
   z-index: 1;
 }
 
-div::before {
+.poem:empty {
+  display: none;
+}
+
+.poem::before {
   content: '"';
   position: absolute;
   top: 15px;
@@ -197,7 +201,7 @@ footer a:hover {
   }
 
   form,
-  div {
+  .poem {
     padding: 30px 25px;
   }
 
