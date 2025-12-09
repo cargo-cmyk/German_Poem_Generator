@@ -136,16 +136,16 @@ input[type="submit"]:active {
 }
 
 .hint {
-  color: #a7f3d0;
-  font-size: 0.95rem;
-  text-align: center;
-  margin-bottom: 30px;
+  color: #059250;
+  font-size: 0.85rem;
+  text-align: left;
+  margin: -10px 0 12px 4px;
   font-style: italic;
   opacity: 0.7;
-  position: relative;
-  z-index: 1;
-  max-width: 550px;
   font-family: "Segoe UI", sans-serif;
+  max-width: 100%;
+  position: static;
+  z-index: auto;
 }
 
 .poem {
@@ -236,7 +236,16 @@ footer a:hover {
   }
 
   .hint {
+    color: #a7f3d0;
     font-size: 0.85rem;
+    text-align: left;
+    margin: -10px 0 12px 4px;
+    font-style: italic;
+    opacity: 0.7;
+    font-family: "Segoe UI", sans-serif;
+    max-width: 100%;
+    position: static;
+    z-index: auto;
   }
 
   footer {
